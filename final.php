@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="us">
     <head>
@@ -14,8 +16,8 @@
         <main>
             <div class="container">
                 <p>Congratulations!</p>
-                <p>Final score: 5</p>
-                <a href="question.php?n=1" class="start">Do the quiz again?</a>
+                <p>Final score: <?php echo $_SESSION['score'];?></p>
+                <a href="question.php?n=1" class="start">Do the quiz again?</a>            
             </div>
         </main>
         <footer>
@@ -25,3 +27,5 @@
         </footer>
     </body>
 </html>
+
+<?php session_destroy();?>
